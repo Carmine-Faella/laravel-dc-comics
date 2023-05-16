@@ -10,7 +10,7 @@
         <img src="{{$comic->thumb}}" class="card-img-top" alt="{{$comic->title}}">
         <div class="card-body">
         <h5 class="card-title">{{$comic->title}}</h5>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
+        <a href="{{route('comics.show', ['comic' => $comic->id])}}" class="btn btn-primary">Vedi dettagli</a>
         </div>
     </div>
   @endforeach
