@@ -4,11 +4,14 @@
 
 @section('content')
 
-<a href="{{route('comics.create')}}" class="btn btn-primary">Crea una nuova card</a>
+<div class="container py-5 text-center">
+  <a href="{{route('comics.create')}}" class="btn btn-primary">Crea una nuova card</a>
+</div>
 
 <div class="container d-flex flex-wrap justify-content-between">
+
   @foreach ($comics as $comic)
-    <div class="card" style="width: 18rem;">
+    <div class="card mb-5 text-center" style="width: 18rem;">
         <img src="{{$comic->thumb}}" class="card-img-top" alt="{{$comic->title}}">
         <div class="card-body">
         <h5 class="card-title">{{$comic->title}}</h5>

@@ -6,7 +6,13 @@
 
 @section('content')
 
-    <form method="POST" action="{{route('comics.store')}}">
+    <h1 class="text-white text-center pt-3">Crea una nuova Card</h1>
+
+    <div class="py-5 text-center">
+        <a href="{{route('comics.index')}}" class="btn btn-secondary">Torna alla lista</a>
+    </div>
+
+    <form method="POST" action="{{route('comics.store')}}" class="text-white">
 
         @csrf
 
@@ -44,8 +50,9 @@
             <label for="type" class="form-label">Tipo</label>
             <input type="text" class="form-control" id="type" name="type">
         </div>
-
-        <button type="submit" class="btn btn-primary">Salva</button>
+        <div class="py-3">
+            <button type="submit" class="btn btn-primary">Salva</button>
+        </div>
     </form>
 
 @endsection
