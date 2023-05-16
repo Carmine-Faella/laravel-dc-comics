@@ -4,6 +4,8 @@
 
 @section('content')
 
+<a href="{{route('comics.create')}}" class="btn btn-primary">Crea una nuova card</a>
+
 <div class="container d-flex flex-wrap justify-content-between">
   @foreach ($comics as $comic)
     <div class="card" style="width: 18rem;">
