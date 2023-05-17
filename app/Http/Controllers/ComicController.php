@@ -85,7 +85,7 @@ class ComicController extends Controller
         $form_data = $request->all();
         $comic->update($form_data);
 
-        return redirect()->route('comics.show', ['comic' => $newComic->id]);
+        return redirect()->route('comics.show', ['comic' => $comic->id]);
     }
 
     /**
@@ -99,6 +99,6 @@ class ComicController extends Controller
         //$comic = Comic::findOrfail($id);
         $comic->delete();
 
-        return redirect()->route('comics.index', ['comic' => $newComic->id]);
+        return redirect()->route('comics.index', ['comic' => $comic->id]);
     }
 }

@@ -17,12 +17,12 @@
           <h5 class="card-title">{{$comic->title}}</h5>
           <div class="d-flex">
             <div>
-              <a href="{{route('comics.show', ['comic' => $comic->id])}}" class="btn btn-primary">Dettagli</a>
+              <a href="{{route('comics.show', ['comic' => $comic->id])}}" class="btn btn-primary">Vedi</a>
             </div>
             <div>
               <a href="{{route('comics.edit', ['comic' => $comic->id])}}" class="btn btn-info text-white">Modifica</a>
             </div>
-            <form action="{{ route('comics.destroy', ['comic' => $comic->id]) }}" method="POST">
+            <form action="{{ route('comics.destroy', ['comic' => $comic->id]) }}" method="POST" onsubmit="return confirm('Vuoi Eliminare?');">
               @csrf
               @method('DELETE')
 
