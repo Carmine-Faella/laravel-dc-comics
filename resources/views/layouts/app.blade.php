@@ -12,11 +12,27 @@
 
     @include('partials.header')
 
-    <main>
-        <div class="container">
-            @yield('content')
-        </div>
-    </main>
+        <main>
+            <div class="container">
+                @if (session('status'))
+                    <div class="alert alert-success my-3">
+                        {{ session('status') }}
+                    </div>
+                @endif
+
+                @if ($errors->any())
+                    <div class="alert alert-danger my-3">
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
+            
+                @yield('content')
+            </div>
+        </main>
 
     @include('partials.footer')
 

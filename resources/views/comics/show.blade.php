@@ -6,7 +6,7 @@
 
 @section('content')
 
-<h1>Dettagli</h1>
+<h1 class="text-white">Dettagli</h1>
 
     <div class="card my-5">
         <div class="row g-0">
